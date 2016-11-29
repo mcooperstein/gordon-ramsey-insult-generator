@@ -26,6 +26,18 @@ $(document).ready(function () {
         $("#submit").hide();
     });
 
+    $(document).on("keydown", function (event) {
+        if (event.which === 13) {
+            getInsult();
+            $("p").show();
+            $("p").text(insult);
+            $("#image2").show();
+            $("#image1").hide();
+            $("#reset").show();
+            $("#submit").hide();
+        }
+    });
+
     $("#reset").click(function () {
         location.reload();
     });
